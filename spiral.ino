@@ -11,12 +11,13 @@
 
 #define M1 12
 #define M2 11
-int servoPin = 3; 
+int servoPin = D4; 
 int st,temp,a,b,c;
 // Create a servo object 
 Servo spiral; 
 void setup() {
-
+  pinMode(D4,OUTPUT);
+    spiral.attach(servoPin); 
 //  Servo1.attach(servoPin); 
   Serial.begin(9600);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -54,12 +55,13 @@ delay(a*1000);
 digitalWrite(M1,LOW);
 digitalWrite(M2,LOW);
 spiral.write(b);
+delay(1000);
 digitalWrite(M1,HIGH);
 digitalWrite(M2,HIGH); 
 delay(c*1000);
 digitalWrite(M1,LOW);
 digitalWrite(M2,LOW);  
-     delay(10000);
+     delay(1000);
      Serial.println(st);
      Serial.println(a);
      Serial.println(b);
