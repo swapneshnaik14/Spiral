@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
 #include <Servo.h>  
-// Set these to run example.
+
 
 #define FIREBASE_HOST "spiral-6f434.firebaseio.com"
 #define FIREBASE_AUTH "uZJcSMbA8q3vb2pWPN1ROqEKvqGeP4Bho37WGeh8"
